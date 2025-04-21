@@ -1,5 +1,7 @@
 const jwt =require('jsonwebtoken');
-const secret='aIH(cnP(*De#h983';
+const dotenv=require('dotenv');
+dotenv.config();
+const secret=process.env.SECRET_KEY;
 function createToken(user){
     const payload={
         fullName:user.fullName,

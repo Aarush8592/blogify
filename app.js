@@ -12,7 +12,7 @@ const app=express();
 const PORT=process.env.PORT||8001;
 const blogRouter=require('./routes/blog');
 
-mongoose.connect(process.env.MongoDbURL).then(()=>console.log("MongoDb connected"))
+mongoose.connect(process.env.MONGODB_URL).then(()=>console.log("MongoDb connected"))
 .catch((err)=>
     console.log(err.message)
 )
